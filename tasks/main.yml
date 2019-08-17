@@ -15,7 +15,6 @@
   delay: 30
   register: result
   until: result.rc == 0
-  changed_when: false
 
 - name: Install snap packages
   snap:
