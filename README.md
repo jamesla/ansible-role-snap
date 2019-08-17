@@ -1,8 +1,8 @@
-## ansible-role-tmux
+## ansible-role-snap
 
 ![status](https://travis-ci.org/jamesla/ansible-role-snap.svg?branch=master)
 
-Builds and installs tmux from the master branch rather than from apt which can be out of date on older distributions.
+Installs snap and a list of user specified packages
 
 ### Usage
 
@@ -21,5 +21,5 @@ requirements.yml:
 ```
 - src: https://github.com/jamesla/ansible-role-snap.git
   version: master
-  name: ansible-role-tmux
+  name: ansible-role-snap
 ```
