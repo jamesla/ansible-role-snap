@@ -1,8 +1,7 @@
 ---
 - name: install snapd
   apt:
-    name:
-      - snapd
+    name: snapd
 
 - name: ensure snap service is running
   service:
@@ -17,10 +16,6 @@
   register: result
   until: result.rc == 0
   changed_when: false
-
-- name: debug
-  debug:
-    msg: "{{ snap_packages }}"
 
 - name: Install snap packages
   snap:
