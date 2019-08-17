@@ -1,7 +1,10 @@
 ---
 - name: install snapd
   apt:
-    name: snapd
+    name:
+      - snapd
+      - fuse
+      - squashfuse
     update_cache: true
 
 - name: ensure snap service is running
