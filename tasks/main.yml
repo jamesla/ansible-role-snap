@@ -21,3 +21,4 @@
   snap:
     name: "{{ item.name }}"
     classic: "{{ item.use_classic }}"
+  with_items: "{{ snap_packages }}"
