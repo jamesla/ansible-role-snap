@@ -13,14 +13,14 @@
     state: started
     enabled: true
 
-- name: wait for snapd to be ready
-  command: snap find test
-  retries: 3
-  delay: 30
-  register: result
-  until: result.rc == 0
-  tags:
-    - skip_ansible_lint
+# - name: wait for snapd to be ready
+#   command: snap find test
+#   retries: 3
+#   delay: 30
+#   register: result
+#   until: result.rc == 0
+#   tags:
+#     - skip_ansible_lint
 
 
 - name: Install snap packages
@@ -28,3 +28,7 @@
     name: "{{ item.name }}"
     classic: "{{ item.use_classic }}"
   with_items: "{{ snap_packages }}"
+  retries: 3
+  delay: 30
+  register: result
+  until: result.rc == 0
