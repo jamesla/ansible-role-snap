@@ -1,0 +1,23 @@
+---
+- name: install snapd
+  apt:
+    name: snapd
+
+- name: ensure snap service is running
+  service:
+    name: snapd
+    state: started
+    enabled: true
+
+- name: wait for snapd to be ready
+  command: snap find test
+  retries: 3
+  delay: 30
+  register: result
+  until: result.rc == 0
+  changed_when: false
+
+- name: Install snap packages
+  snap:
+    name: "{{ item.name }}"
+    classic: "{{ item.use_classic }}"
