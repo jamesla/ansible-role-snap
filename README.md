@@ -7,7 +7,7 @@ Installs snap and a list of user specified packages
 add the following variable:
 ```
 snap_packages:
-  - name: hel
+  - name: helm
     use_classic: true
 ```
 playbook.yml:
