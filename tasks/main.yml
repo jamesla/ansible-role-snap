@@ -2,6 +2,7 @@
 - name: install snapd
   apt:
     name: snapd
+    update_cache: true
 
 - name: ensure snap service is running
   service:
