@@ -1,7 +1,5 @@
 ## ansible-role-snap
 
-![status](https://travis-ci.org/jamesla/ansible-role-snap.svg?branch=master)
-
 Installs snap and a list of user specified packages
 
 ### Usage

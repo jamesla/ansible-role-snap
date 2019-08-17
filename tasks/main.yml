@@ -3,7 +3,6 @@
   apt:
     name:
       - snapd
-      - squashfs
 
 - name: ensure snap service is running
   service:
