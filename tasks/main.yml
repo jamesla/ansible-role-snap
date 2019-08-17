@@ -1,7 +1,9 @@
 ---
 - name: install snapd
   apt:
-    name: snapd
+    name:
+      - snapd
+      - squashfs
 
 - name: ensure snap service is running
   service:
